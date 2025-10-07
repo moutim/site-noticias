@@ -9,6 +9,20 @@ header {
   color: white;
   padding: 30px 0;
   text-align: center;
+  position: relative;
+}
+
+.menu-mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: crimson;
+  color: white;
+  opacity: 0;
+  transition: .3s ease-in-out;
+  pointer-events: none; 
+  z-index: 1;
 }
 
 header h1 {
@@ -22,6 +36,10 @@ header nav a {
   margin-right: 15px;
   margin-left: 15px;
   transition: color 0.4s;
+}
+
+header nav a:hover {
+  color: blueviolet;
 }
 
 header nav {
@@ -99,12 +117,14 @@ main {
   justify-content: space-between;
 }
 
-.menu-mobile {
-  display: none;
+.menu-mobile.menu-ativo {
+  max-height: 600px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.menu-ativo {
-  display: block;
+.icone-menu {
+  display: none;
 }
 
 @media (max-width: 1000px) {
@@ -155,6 +175,10 @@ main {
     font-size: 20px;
     padding: 15px 0;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.505);
+  }
+
+  .icone-menu {
+    display: block;
   }
 
   header h1 {
