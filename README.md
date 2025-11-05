@@ -1,4 +1,4 @@
-# Portal de noticias
+# Portal de filmes e séries
 
 ## 📖 Sobre o Projeto
 
